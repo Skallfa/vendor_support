@@ -177,7 +177,7 @@ public class ConstraintsHelper {
                 }
             }
 
-            // Check if a system feature is available
+            /** Check if a system feature is available
             String rFeature = a.getString(R.styleable.lineage_SelfRemovingPreference_requiresFeature);
             if (rFeature != null) {
                 boolean negated = isNegated(rFeature);
@@ -186,12 +186,12 @@ public class ConstraintsHelper {
                 }
                 boolean available = rFeature.startsWith("lineagehardware:") ?
                         LineageHardwareManager.getInstance(mContext).isSupported(
-                                rFeature.substring("lineagehardware:".length())) :
+                                rFeature.substring(16)) :
                         hasSystemFeature(mContext, rFeature);
                 if (available == negated) {
                     return false;
                 }
-            }
+            }**/
 
             // Check a boolean system property
             String rProperty = a.getString(R.styleable.lineage_SelfRemovingPreference_requiresProperty);
